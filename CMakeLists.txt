@@ -23,4 +23,10 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+#this must be added so launch files can be used from CLI
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME})
+
+#Generally, ament_package() should be the last command in your CMakeLists.txt file.
 ament_package()
