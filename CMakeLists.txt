@@ -24,9 +24,10 @@ if(BUILD_TESTING)
 endif()
 
 #this must be added so launch files can be used from CLI
-install(DIRECTORY
-  launch
-  DESTINATION share/${PROJECT_NAME})
+install(
+  DIRECTORY config description launch worlds
+  DESTINATION share/${PROJECT_NAME}
+)
 
 #Generally, ament_package() should be the last command in your CMakeLists.txt file.
 ament_package()
